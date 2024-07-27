@@ -48,7 +48,9 @@ def get_next_question(current_question_id):
     else:
         return None, None
 
-    return PYTHON_QUESTION_LIST[next_question_id]['question_text'], next_question_id
+    next_question = PYTHON_QUESTION_LIST[next_question_id]['question_text']
+
+    return next_question, next_question_id
 
 
 def generate_final_response(session):
